@@ -60,7 +60,7 @@ public class Event {
 
     public void toReserve(int n){
         if (dateEvent.isBefore(TODAY_DATE)){
-            throw new EventExceptions("your a little too late for this event, choose anoter one");
+            throw new EventExceptions("your a little too late for this event, choose another one");
         } else if (n > getAvailableSeats()) {
             throw new EventExceptions("there are too many people, choose who comes and who not");
         }
