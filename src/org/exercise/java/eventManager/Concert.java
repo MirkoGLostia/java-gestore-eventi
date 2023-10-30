@@ -55,10 +55,7 @@ public class Concert extends Event{
 
     @Override
     public String toString() {
-        return "Concert{" +
-                "timeOfEvent=" + getFormatTime() +
-                ", nameEvent='" + nameEvent  +
-                ", ticketPrice=" + getFormatPrice() + '\'' +
-                '}';
+        return getFormatTime() + " concert: " + nameEvent  +
+                " Price: " + getFormatPrice() + '\'';
     }
 }
