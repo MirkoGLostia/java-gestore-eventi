@@ -4,14 +4,14 @@ import java.time.LocalDate;
 
 public class Event {
     // constants
-    private final int INITIAL_RESERVED_SEATS = 0;
-    private LocalDate TODAY_DATE = LocalDate.now();
+    protected final int INITIAL_RESERVED_SEATS = 0;
+    protected LocalDate TODAY_DATE = LocalDate.now();
 
     // attributes
-    private String nameEvent;
-    private LocalDate dateEvent;
-    private final int totalSeats;
-    private int reservedSeats;
+    protected String nameEvent;
+    protected LocalDate dateEvent;
+    protected final int totalSeats;
+    protected int reservedSeats;
 
     // constructor
 
