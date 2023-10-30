@@ -1,6 +1,7 @@
 package org.exercise.java.eventManager.bonus;
 
 import org.exercise.java.eventManager.Event;
+import org.exercise.java.eventManager.EventExceptions;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ public class ProgrammEvent {
 
     // constructor
 
-    public ProgrammEvent(String title, List<Event> events) {
+    public ProgrammEvent(String title) {
         this.title = title;
         this.events = new ArrayList<>();
     }
@@ -26,12 +27,15 @@ public class ProgrammEvent {
         events.add(x);
     }
 
-    public List<Event> getListEventByDate (LocalDate date) {
+    public List<Event> getListEventByDate (LocalDate date) throws EventExceptions{
         List<Event> filteredList = new ArrayList<>();
         for (Event ev : events) {
             if (ev.getDateEvent().isEqual(date)){
                 filteredList.add(ev);
             }
+        }
+        if (filteredList.isEmpty()) {
+            throw new EventExceptions("no events for this date");
         }
         return  filteredList;
     }
